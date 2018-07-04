@@ -55,18 +55,13 @@ int main()
 					oldX = oldY = 0;
 				}
 				else if (abs(dx + oldX) >= 2 || abs(dy + oldY) >= 2) {
-					if (abs(dx) >= 2) {
 						mstroke.x = (int)(dx + oldX);
-						oldX = 0;
-					}
-					if (abs(dy) >= 2) {
 						mstroke.y = (int)(dy + oldY);
-						oldY = 0;
-					}
+						oldX = oldY = 0;
 				}
 				else {
-					oldX = (int)(dx);
-					oldY = (int)(dy);
+					oldX += (int)(dx);
+					oldY += (int)(dy);
 					mstroke.x = 0;
 					mstroke.y = 0;
 				}
